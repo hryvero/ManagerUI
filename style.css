@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+
+}
+div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: darkgreen;
+    color: antiquewhite;
+}
+input{
+    width: 170px;
+    height: 40px;
+    border: 1px grey solid;
+    border-radius: 9px;
+    padding: 9px 15px;
+    box-sizing: border-box;
+}
+button{
+    width: 90px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color: rgb(1, 121, 33);
+    color: antiquewhite;
+    border-radius: 9px;
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+   
+}
+.error-label{
+    
+    visibility: hidden;
+    color: red;
+}
+
