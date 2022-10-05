@@ -1,11 +1,32 @@
 import { SessionToken } from "../models/AuthModel";
 
+const baseUrl='http://localhost:8080/'
+const loginUrl= baseUrl + 'login'
 
 export class LoginService{
 
-    public async login(username: string, password: string):Promise<SessionToken | undefined>{
-        if (username=='user'&& password=='123') {
-            return {username:'someUser'}as any
+    public async login(userName: string, password: string):Promise<SessionToken | undefined>{
+        let options={
+            method: 'POST',
+            headers:{
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: userName,
+                password: password
+            })
+        }
+
+        const result= await fetch(loginUrl,{
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                username: userName,
+                password: password
+            })
+        })
+        if(result.status==201){
+            return await result.json()
         }else{
             return undefined
         }
