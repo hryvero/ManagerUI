@@ -17,14 +17,8 @@ export class LoginService{
             })
         }
 
-        const result= await fetch(loginUrl,{
-            method: 'POST',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                username: userName,
-                password: password
-            })
-        })
+        const result= await fetch(loginUrl,options)
+
         if(result.status==201){
             return await result.json()
         }else{

@@ -52,4 +52,7 @@ button{
     visibility: hidden;
     color: red;
 }
+label.selectedLabel{
+    font-weight: 900;
+}
 
